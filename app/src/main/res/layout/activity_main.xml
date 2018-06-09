@@ -5,268 +5,276 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="match_parent"
+        android:layout_above="@id/reset_button">
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Blue Team"
-                android:textColor="@color/colorTkdBlue"
-                android:textSize="14sp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/team_a_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000"
-                    android:textSize="56sp" />
+                    android:padding="16dp"
+                    android:text="Blue Team"
+                    android:textColor="@color/colorTkdBlue"
+                    android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/team_a_gamjeom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/team_a_gamjeom_text"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginRight="8dp"
-                    android:text="0"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/team_a_gamjeom_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginTop="64dp"
-                    android:text="GJ"/>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000"
+                        android:textSize="56sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addFiveForTeamA"
-                android:text="@string/btn_turning_head_kick"
-                android:textColor="@android:color/white" />
+                    <TextView
+                        android:id="@+id/team_a_gamjeom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/team_a_gamjeom_text"
+                        android:layout_marginTop="64dp"
+                        android:layout_marginRight="8dp"
+                        android:text="0"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addThreeForTeamA"
-                android:text="@string/btn_head_kick"
-                android:textColor="@android:color/white" />
+                    <TextView
+                        android:id="@+id/team_a_gamjeom_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="64dp"
+                        android:text="GJ"/>
+                </RelativeLayout>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addFourForTeamA"
-                android:text="@string/btn_turning_kick"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addTwoForTeamA"
-                android:text="@string/btn_kick"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addOneForTeamA"
-                android:text="@string/btn_punch"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdBlue"
-                android:onClick="addGamJeomForTeamA"
-                android:text="@string/btn_penalty"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="Red Team"
-                android:textColor="@color/colorTkdRed"
-                android:textSize="14sp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/team_b_score"
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:paddingBottom="24dp"
-                    android:text="0"
-                    android:textColor="#000"
-                    android:textSize="56sp" />
-
-                <TextView
-                    android:id="@+id/team_b_gamjeom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/team_b_gamjeom_text"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginRight="8dp"
-                    android:text="0"/>
-
-                <TextView
-                    android:id="@+id/team_b_gamjeom_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:layout_marginTop="64dp"
-                    android:text="GJ"/>
-            </RelativeLayout>
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addFiveForTeamA"
+                    android:text="@string/btn_turning_head_kick"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addFiveForTeamB"
-                android:text="@string/btn_turning_head_kick"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addThreeForTeamA"
+                    android:text="@string/btn_head_kick"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addThreeForTeamB"
-                android:text="@string/btn_head_kick"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addFourForTeamA"
+                    android:text="@string/btn_turning_kick"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addFourForTeamB"
-                android:text="@string/btn_turning_kick"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addTwoForTeamA"
+                    android:text="@string/btn_kick"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addTwoForTeamB"
-                android:text="@string/btn_kick"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addOneForTeamA"
+                    android:text="@string/btn_punch"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addOneForTeamB"
-                android:text="@string/btn_punch"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdBlue"
+                    android:onClick="addGamJeomForTeamA"
+                    android:text="@string/btn_penalty"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
 
-            <Button
-                android:layout_width="match_parent"
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:padding="4dp"
-                android:background="@color/colorTkdRed"
-                android:onClick="addGamJeomForTeamB"
-                android:text="@string/btn_penalty"
-                android:textColor="@android:color/white" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Red Team"
+                    android:textColor="@color/colorTkdRed"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="24dp"
+                        android:text="0"
+                        android:textColor="#000"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_gamjeom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/team_b_gamjeom_text"
+                        android:layout_marginTop="64dp"
+                        android:layout_marginRight="8dp"
+                        android:text="0"/>
+
+                    <TextView
+                        android:id="@+id/team_b_gamjeom_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="64dp"
+                        android:text="GJ"/>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addFiveForTeamB"
+                    android:text="@string/btn_turning_head_kick"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addThreeForTeamB"
+                    android:text="@string/btn_head_kick"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addFourForTeamB"
+                    android:text="@string/btn_turning_kick"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/btn_kick"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addOneForTeamB"
+                    android:text="@string/btn_punch"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    android:background="@color/colorTkdRed"
+                    android:onClick="addGamJeomForTeamB"
+                    android:text="@string/btn_penalty"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
 
     <Button
+        android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="resetScore"
         android:background="@color/colorTkdYellow"
